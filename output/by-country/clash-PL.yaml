@@ -13,32 +13,6 @@ proxies:
   udp: true
 - name: 🇵🇱 PL 02 - xiaohe
   type: vless
-  server: 94.183.209.58
-  port: 443
-  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pl2.lckdwn.ru
-- name: 🇵🇱 PL 03 - xiaohe
-  type: vless
-  server: 94.183.209.58
-  port: 443
-  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pl2.lckdwn.ru
-- name: 🇵🇱 PL 04 - xiaohe
-  type: vless
   server: 94.183.209.43
   port: 443
   uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
@@ -50,7 +24,7 @@ proxies:
     path: /
     headers:
       Host: 94.183.209.43
-- name: 🇵🇱 PL 05 - xiaohe
+- name: 🇵🇱 PL 03 - xiaohe
   type: vless
   server: 2.26.224.233
   port: 8443
@@ -62,11 +36,11 @@ proxies:
     public-key: NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU
   servername: cdn.shopify.com
   client-fingerprint: firefox
-- name: 🇵🇱 PL 06 - xiaohe
+- name: 🇵🇱 PL 04 - xiaohe
   type: vless
-  server: 94.183.209.42
+  server: 94.183.209.58
   port: 443
-  uuid: 84c898c4-6990-4121-ae51-27d989f5ce39
+  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
   udp: true
   tls: false
   skip-cert-verify: true
@@ -74,7 +48,33 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: pl3.lckdwn.ru
+      Host: pl2.lckdwn.ru
+- name: 🇵🇱 PL 05 - xiaohe
+  type: vless
+  server: 94.183.209.58
+  port: 443
+  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pl2.lckdwn.ru
+- name: 🇵🇱 PL 06 - xiaohe
+  type: vless
+  server: 94.183.209.58
+  port: 443
+  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.209.58
 - name: 🇵🇱 PL 07 - xiaohe
   type: vless
   server: 94.183.209.59
@@ -88,32 +88,6 @@ proxies:
     path: /
     headers:
       Host: 94.183.209.59
-- name: 🇵🇱 PL 08 - xiaohe
-  type: vless
-  server: 94.183.209.42
-  port: 443
-  uuid: 84c898c4-6990-4121-ae51-27d989f5ce39
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 94.183.209.42
-- name: 🇵🇱 PL 09 - xiaohe
-  type: vless
-  server: 94.183.209.42
-  port: 443
-  uuid: 84c898c4-6990-4121-ae51-27d989f5ce39
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 94.183.209.42
 proxy-groups:
 - name: PROXIES
   type: select
@@ -126,8 +100,6 @@ proxy-groups:
   - 🇵🇱 PL 05 - xiaohe
   - 🇵🇱 PL 06 - xiaohe
   - 🇵🇱 PL 07 - xiaohe
-  - 🇵🇱 PL 08 - xiaohe
-  - 🇵🇱 PL 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -140,7 +112,5 @@ proxy-groups:
   - 🇵🇱 PL 05 - xiaohe
   - 🇵🇱 PL 06 - xiaohe
   - 🇵🇱 PL 07 - xiaohe
-  - 🇵🇱 PL 08 - xiaohe
-  - 🇵🇱 PL 09 - xiaohe
 rules:
 - MATCH,PROXIES
